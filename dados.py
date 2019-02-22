@@ -1,6 +1,8 @@
 from tkinter import *
 import pandas as pd
 import matplotlib.pyplot as plt
+janela = Tk()
+janela.geometry("400x400")
 
 
 dados = pd.read_excel(r"C:\Users\MecTecnologia\Desktop\dados.xlsx")
@@ -8,31 +10,34 @@ dados = pd.read_excel(r"C:\Users\MecTecnologia\Desktop\dados.xlsx")
 
 class Application:
     def grafico_linha (self,):
-        dados = pd.read_excel (input(r""))
+        pd.read_excel = (dados)
         plt.plot (dados["Idade"])
+        plt.title("MEUS DADOS")
         plt.xlabel("Nome")
         plt.ylabel("Idade")
         plt.show()
 
     def grafico_pizza (self,):
 
-        dados = pd.read_excel (input(r""))
+        pd.read_excel = (dados)
         plt.pie(dados["Idade"], labels=dados["Nome"], autopct="%1.0f%%")
+        plt.title("MEUS DADOS")
         plt.xlabel("")
         plt.ylabel("")
         plt.show()
 
     def grafico_barra (self,):
 
-        dados = pd.read_excel (input(r""))
-        plt.hist(dados["Nome"], bins=15 )
+        pd.read_excel = (dados)
+        plt.hist(dados["Nome"], bins=15)
+        plt.title("MEUS DADOS")
         plt.xlabel("Nome")
         plt.ylabel("Idade")
         plt.show()
 
     def __init__(self, master=None,):
         self.widget1 = Frame(master)
-        self.widget1 = Frame(width=1024, height=768, bg='blue')
+        self.widget1 = Frame(width=1024, height=768, bg="black")
         self.widget1.pack()
         self.msg = Label(self.widget1 , text= "Dados")
         self.msg.pack()
@@ -62,6 +67,6 @@ class Application:
         self.sair.pack()
 
 
-root = Tk()
+root = ()
 Application(root)
-root.mainloop()
+janela.mainloop()
